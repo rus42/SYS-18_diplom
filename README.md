@@ -94,7 +94,7 @@ Kibana на виртуальной машине развернута с испо
 ![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/security_group.png)
 
 
-## Логи
+## Резервное копирование
 
 ### Создайте snapshot дисков всех ВМ. Ограничьте время жизни snaphot в неделю. Сами snaphot настройте на ежедневное копирование.
 
