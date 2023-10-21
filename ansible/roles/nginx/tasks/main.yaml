@@ -1,0 +1,15 @@
+  - name: "install nginx"
+    apt:
+      name: nginx
+      state: latest
+      update_cache: yes
+
+  - name: "copy website"
+    copy:
+     src: ../templates/index.html
+     dest: /var/www/html/index.html
+        
+  - name: restart nginx
+    service:
+      name: nginx
+      state: restarted

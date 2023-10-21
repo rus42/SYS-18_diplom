@@ -1,0 +1,5 @@
+---
+- name: Установка nginx
+  hosts: website
+  roles:
+  - nginx

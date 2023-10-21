@@ -1,0 +1,5 @@
+---
+- name: Установка filebeat
+  hosts: website
+  roles:
+  - filebeat

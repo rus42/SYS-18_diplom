@@ -1,0 +1,22 @@
+  - name: Скачивание пакета filebeat из репозитория yandex
+    get_url:  
+      url: https://mirror.yandex.ru/mirrors/elastic/8/pool/main/f/filebeat/filebeat-8.9.2-amd64.deb
+      dest: /tmp
+
+  - name: Установка скаченного пкета filebeat
+    apt:
+      deb: /tmp/filebeat-8.9.2-amd64.deb
+
+  - name: Копирование файла конфигурации
+    copy:
+      src: ../templates/filebeat.yml
+      dest: /etc/filebeat/
+      mode: 0644
+      owner: root
+      group: root
+
+  - name: Добавление службы в автозагрузку и запуск службы filebeat
+    systemd:
+      name: filebeat
+      state: started
+      enabled: yes

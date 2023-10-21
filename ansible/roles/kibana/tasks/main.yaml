@@ -1,0 +1,26 @@
+  - name: Скачивание пакета kibana из репозитория yandex
+    get_url:  
+      url: https://mirror.yandex.ru/mirrors/elastic/8/pool/main/k/kibana/kibana-8.9.2-amd64.deb
+      dest: /tmp
+
+  - name: Установка скаченного пкета kibana
+    apt:
+      deb: /tmp/kibana-8.9.2-amd64.deb 
+      
+  - name: Минимальная настройка конфигурации kibana
+    lineinfile:
+      path: /etc/kibana/kibana.yml
+      regexp: "{{ item.regexp }}"
+      line: "{{ item.line }}"
+      backup: yes
+    with_items:
+      - { regexp: '#elasticsearch.hosts: ["http://localhost:9200"]', line: 'elasticsearch.hosts: ["http://192.168.30.101:9200"]'}
+      - { regexp: '#server.host: "localhost"', line: 'server.host: 0.0.0.0'}
+      
+  - name: Добавление службы в автозагрузку и перезапуск службы kibana
+    systemd:
+      name: kibana
+      enabled: yes  
+      state: restarted
+
+      

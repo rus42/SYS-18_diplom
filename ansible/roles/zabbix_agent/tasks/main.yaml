@@ -1,0 +1,19 @@
+  - name: "install zabbix agent"
+    apt:
+      name:  zabbix-agent
+      state: latest
+      
+  - name: Настройка конфигурации zabbix agent
+    lineinfile:
+      path: /etc/zabbix/zabbix_agentd.conf
+      regexp: "{{ item.regexp }}"
+      line: "{{ item.line }}"
+      backup: yes
+    with_items:
+      - { regexp: 'Server=127.0.0.1', line: 'Server={{ zabbixServer }}'}
+      - { regexp: 'ServerActive=127.0.0.1', line: 'ServerActive={{ zabbixServer }}'}
+      
+  - name: Запуск службы zabbix агент
+    systemd:
+      name: zabbix-agent.service      
+      state: restarted

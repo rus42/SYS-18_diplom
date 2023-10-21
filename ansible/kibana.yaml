@@ -1,0 +1,5 @@
+---
+- name: Установка kibana
+  hosts: kibana
+  roles:
+  - kibana

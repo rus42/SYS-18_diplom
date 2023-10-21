@@ -1,0 +1,22 @@
+  - name: Скачивание пакета elasticsearch из репозитория yandex
+    get_url:  
+      url: https://mirror.yandex.ru/mirrors/elastic/8/pool/main/e/elasticsearch/elasticsearch-8.9.2-amd64.deb
+      dest: /tmp
+
+  - name: Установка скаченного пкета elasticsearch
+    apt:
+      deb: /tmp/elasticsearch-8.9.2-amd64.deb
+
+  - name: Копирование файла конфигурации
+    copy:
+      src: ../templates/elasticsearch.yml
+      dest: /etc/elasticsearch
+      mode: 0660
+      owner: root
+      group: elasticsearch
+
+  - name: Добавление службы в автозагрузку и запуск службы elasticsearch
+    systemd:
+      name: elasticsearch
+      enabled: yes  
+      state: started

@@ -1,0 +1,5 @@
+---
+- name: Установка elasticsearch
+  hosts: elasticsearch
+  roles:
+  - elasticsearch

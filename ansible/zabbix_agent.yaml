@@ -1,0 +1,5 @@
+---
+- name: Установка zabbix agent
+  hosts: website
+  roles:
+  - zabbix_agent
