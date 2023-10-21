@@ -24,7 +24,7 @@
 
 ![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/application_load_balancer_vm_website.png)
 
-На вирутальных машинах с использованием ansibe [ansible/nginx.yml](ansible/nginx.yml) установлен nginx и развернут сайт. 
+На вирутальных машинах с использованием ansibe [ansible/nginx.yaml](ansible/nginx.yml) установлен nginx и развернут сайт. 
 
 ### Протестируйте сайт curl -v <публичный IP балансера>:80
 
@@ -35,7 +35,7 @@
 
 ### Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix агенты, настройте агенты на отправление метрик в Zabbix.
 
-Zabbix сервер на виртуальной машине развернут с использованием ansibe [ansible/zabbix_server.yml](ansible/zabbix_server.yml)
+Zabbix сервер на виртуальной машине развернут с использованием ansibe [ansible/zabbix_server.yaml](ansible/zabbix_server.yml)
 
 ![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/zabbix.png)
 
@@ -44,7 +44,7 @@ Zabbix сервер на виртуальной машине развернут 
 Логин: Admin
 Пароль: zabbix
 
-На вирутальные машины с вебсайтом с использованием ansibe [ansible/zabbix_agent.yml](ansible/zabbix_agent.yml) установлены zabbix агенты. 
+На вирутальные машины с вебсайтом с использованием ansibe [ansible/zabbix_agent.ayml](ansible/zabbix_agent.yml) установлены zabbix агенты. 
 
 Настроено автоматическое обнаружение хостов.
 
