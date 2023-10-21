@@ -84,6 +84,16 @@ Kibana на виртуальной машине развернута с испо
 
 ![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/kibana_log.png)
 
+
+## Сеть
+
+### Разверните один VPC. Сервера web, Elasticsearch поместите в приватные подсети. Сервера Zabbix, Kibana, application load balancer определите в публичную подсеть. Настройте Security Groups соответствующих сервисов на входящий трафик только к нужным портам.
+
+Настроены группы безопасности.
+
+![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/security_group.png)
+
+
 ## Логи
 
 ### Создайте snapshot дисков всех ВМ. Ограничьте время жизни snaphot в неделю. Сами snaphot настройте на ежедневное копирование.
