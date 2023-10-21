@@ -83,3 +83,11 @@ Kibana на виртуальной машине развернута с испо
 Логи отправляются в elasticsearch.
 
 ![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/kibana_log.png)
+
+## Логи
+
+### Создайте snapshot дисков всех ВМ. Ограничьте время жизни snaphot в неделю. Сами snaphot настройте на ежедневное копирование.
+
+Выполнена настройка резервного копирования.
+
+![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/snapshot.png)
