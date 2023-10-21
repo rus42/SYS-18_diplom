@@ -61,3 +61,10 @@ Zabbix сервер на виртуальной машине развернут 
 
 
 ## Логи
+
+### Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
+
+![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/vm_elasticsearch.png)
+
+Elasticsearch на виртуальной машине развернут с использованием ansibe [ansible/elasticsearch.yaml](ansible/elasticsearch.yaml)
+Filebeat на виртуальной машине развернут с использованием ansibe [ansible/filebeat.yaml](ansible/filebeat.yaml)
