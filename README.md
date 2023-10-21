@@ -75,3 +75,11 @@ Filebeat на виртуальной машине развернут с испо
 ![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/vm_kibana.png)
 
 Kibana на виртуальной машине развернута с использованием ansibe [ansible/kibana.yaml](ansible/kibana.yaml)
+
+Веб-консоль kibana доступна из сети интернет по адресу http://51.250.36.191:5601
+
+Данные для авторизации: без авторизации.
+
+Логи отправляются в elasticsearch.
+
+![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/kibana_log.png)
