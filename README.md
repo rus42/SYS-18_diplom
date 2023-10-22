@@ -68,9 +68,19 @@ Zabbix сервер на виртуальной машине развернут 
 
 Elasticsearch на виртуальной машине развернут с использованием ansibe [ansible/elasticsearch.yaml](ansible/elasticsearch.yaml)
 
+Выполнена проверка состояния кластера.
+
+![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/cluster_health.png)
+
 Filebeat на виртуальной машине развернут с использованием ansibe [ansible/filebeat.yaml](ansible/filebeat.yaml)
 
-Создайте ВМ, разверните на ней Kibana, сконфигурируйте соединение с Elasticsearch.
+Выполнена тестовая проверка доступности elasticsearch.
+
+![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/filebeat_test_vm1.png)
+
+![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/filebeat_test_vm2.png)
+
+### Создайте ВМ, разверните на ней Kibana, сконфигурируйте соединение с Elasticsearch.
 
 ![alt text](https://github.com/rus42/SYS-18_diplom/blob/main/img/vm_kibana.png)
 
