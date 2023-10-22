@@ -1,11 +1,11 @@
 [website]
-192.168.20.100
-192.168.10.100
+website1.ru-central1.internal
+website2.ru-central1.internal
 [website:vars]
 zabbixServer=192.168.30.102
 
 [zabbix]
-192.168.30.102
+zabbix.ru-central1.internal
 [zabbix:vars]
 dbName=zabbix
 dbUser=zabbix
@@ -14,7 +14,7 @@ dbHost=localhost
 rootPass=P@$$w0rd
 
 [kibana]
-192.168.30.103
+kibana.ru-central1.internal
 
 [elasticsearch]
-192.168.30.101
+elasticsearch.ru-central1.internal
